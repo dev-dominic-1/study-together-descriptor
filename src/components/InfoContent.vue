@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper pa-4">
     <div class="heading-2">Welcome to Study Together!</div>
+    <div>SAMPLE CONTENT FOR THIS PAGE</div>
   </div>
 </template>
 
