@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper pa-4">
     <div class="heading-2">Welcome to Study Together!</div>
   </div>
 </template>
