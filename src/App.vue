@@ -19,6 +19,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 //noinspection ALL
 #app {
+  @for $i from 1 through 9 {
+    $calc: #{$i * 100};
+    & .font-weight-#{$calc} {
+      font-weight: $calc;
+    }
+  }
   font-family: 'Montserrat', serif;
   font-size: 16px;
   & .body-2 {
