@@ -25,6 +25,9 @@ export default {
       font-weight: $calc;
     }
   }
+  & *[type=button] {
+    text-transform: capitalize;
+  }
   font-family: 'Montserrat', serif;
   font-size: 16px;
   & .body-2 {
