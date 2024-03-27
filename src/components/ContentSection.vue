@@ -2,7 +2,7 @@
   <v-card
     class="px-0 pb-4 rounded-xl transparent elevation-0"
   >
-    <v-card-title class="heading-2 px-0 pb-0 mb-4 pt-4">
+    <v-card-title class="heading-2 px-0 pb-0 mb-4 pt-4 title-container">
       <slot name="title">
         {{ title }}
       </slot>
@@ -18,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.title-container {
+  word-break: break-word;
+}
+</style>
