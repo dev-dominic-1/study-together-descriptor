@@ -20,7 +20,6 @@
           :key="`link-stack-${stackIndex}`" 
           cols="4"
           class="link-stack px-2"
-          :class="{'pl-0': stackIndex === 0, 'pr-0': stackIndex === linkButtons.length - 1}"
         >
           <div
             v-for="(button, buttonIndex) of stack"
@@ -42,7 +41,6 @@ export default {
   name: 'InfoContent',
   components: {LinkButton},
   computed: {
-    COMMON_COLORS () {return COMMON_COLORS},
     linkButtons () {
       return [
         [
