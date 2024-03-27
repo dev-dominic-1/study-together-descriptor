@@ -3,7 +3,7 @@
 		:color="config.color"
 		block
 		:class="[`${config.textColor}--text`]"
-		class="link-button"
+		class="link-button rounded-xl"
     :disabled="config.disabled"
     @click="goTo"
 	>
