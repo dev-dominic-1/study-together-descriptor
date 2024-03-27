@@ -1,6 +1,6 @@
 <template>
   <div>
-    ANGULAR CONTENT
+    Details coming soon!
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    VUE CONTENT
+    Details coming soon!
   </div>
 </template>
 

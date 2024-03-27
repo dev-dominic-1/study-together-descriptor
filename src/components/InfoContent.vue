@@ -1,29 +1,27 @@
 <template>
-  <div class="wrapper pa-4 pt-8">
+  <div class="wrapper pa-4">
     <content-section>
       <template #title>
         Welcome to Study Together!
       </template>
-      <div class="px-3">
-        <div class="pt-2">
-          Study Together is an application built to uncover the nuances and
-          fundamental distinctions among the three major JavaScript frameworks:
-          React, Angular, and Vue, along with their respective material design libraries.
-        </div>
-        <div class="pt-4">
-          <span class="font-weight-600">This application is an ongoing project</span>,
-          continuously evolving with daily revisions to its components in each iteration.
-          It will be consistently updated utilizing
-          <span class="font-weight-600">Continuous Integration via Netlify</span> to ensure
-          seamless enhancements and improvements.
-        </div>
-        <div class="pt-4">
-          Study Together currently features two published versions implemented in two leading modern JavaScript frameworks,
-          Angular and Vue. A third version, utilizing React, is in active development and will soon be released as well.
-        </div>
+      <div>
+        Study Together is an application built to uncover the nuances and
+        fundamental distinctions among the three major JavaScript frameworks:
+        React, Angular, and Vue, along with their respective material design libraries.
+      </div>
+      <div class="pt-4">
+        <span class="font-weight-600">This application is an ongoing project</span>,
+        continuously evolving with daily revisions to its components in each iteration.
+        It will be consistently updated utilizing
+        <span class="font-weight-600">Continuous Integration via Netlify</span> to ensure
+        seamless enhancements and improvements.
+      </div>
+      <div class="pt-4">
+        Study Together currently features two published versions implemented in two leading modern JavaScript frameworks,
+        Angular and Vue. A third version, utilizing React, is in active development and will soon be released as well.
       </div>
     </content-section>
-    <content-section>
+    <content-section class="pt-4">
       <template #title>
         Current Published Versions
       </template>
@@ -43,53 +41,50 @@
         </v-col>
       </v-row>
     </content-section>
-    <content-section>
+    <content-section class="pt-4">
       <template #title>
         State of Current Published Versions
       </template>
-      <div class="px-3">
-
-        <v-tabs
-          v-model="tab"
-          fixed-tabs
-          :color="tabs[tab].color"
-          background-color="background"
+      <v-tabs
+        v-model="tab"
+        fixed-tabs
+        :color="tabs[tab].color"
+        background-color="background"
+      >
+        <v-tab
+          v-for="tab of tabs"
+          :key="tab.key"
+          :disabled="tab.disabled"
         >
-          <v-tab
-            v-for="tab of tabs"
-            :key="tab.key"
-          >
-            {{ tab.text }}
-          </v-tab>
-        </v-tabs>
-        <v-tabs-items v-model="tab" class="background">
-          <v-tab-item :key="tabs[0].key">
-            <angular-tab-content />
-          </v-tab-item>
-          <v-tab-item :key="tabs[1].key">
-            <vue-tab-content />
-          </v-tab-item>
-          <v-tab-item :key="tabs[2].key">
-            <react-tab-content />
-          </v-tab-item>
-        </v-tabs-items>
-      </div>
+          {{ tab.text }}
+        </v-tab>
+      </v-tabs>
+      <v-divider />
+      <v-tabs-items v-model="tab" class="background">
+        <v-tab-item :key="tabs[0].key">
+          <angular-tab-content />
+        </v-tab-item>
+        <v-tab-item :key="tabs[1].key">
+          <vue-tab-content />
+        </v-tab-item>
+        <v-tab-item :key="tabs[2].key">
+          <react-tab-content />
+        </v-tab-item>
+      </v-tabs-items>
     </content-section>
-    <content-section>
+    <content-section class="pt-4">
       <template #title>
         State of the Back End
       </template>
-      <div class="px-3">
-        The backend infrastructure of this application is built using a
-        <span class="font-weight-bold">.NET Core Web API</span>, complemented by
-        <span class="font-weight-bold">Microsoft SQL Server</span> as the chosen database solution using
-        <span class="font-weight-bold">Code-First Migrations</span>. Rigorous testing has been conducted on the backend
-        code within a locally hosted environment. Upon finalizing a web-hosting service, the backend will seamlessly
-        transition to a live environment, making registration and content customization possible withing the Study
-        Together application!
-        <div class="pt-3 px-3">
-          <link-button :config="backendRepositoryLinkButton" />
-        </div>
+      The backend infrastructure of this application is built using a
+      <span class="font-weight-bold">.NET Core Web API</span>, complemented by
+      <span class="font-weight-bold">Microsoft SQL Server</span> as the chosen database solution using
+      <span class="font-weight-bold">Code-First Migrations</span>. Rigorous testing has been conducted on the backend
+      code within a locally hosted environment. Upon finalizing a web-hosting service, the backend will seamlessly
+      transition to a live environment, making registration and content customization possible withing the Study
+      Together application!
+      <div class="pt-3 px-3">
+        <link-button :config="backendRepositoryLinkButton" />
       </div>
     </content-section>
   </div>

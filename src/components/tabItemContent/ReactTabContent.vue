@@ -1,6 +1,6 @@
 <template>
   <div>
-    REACT CONTENT
+    Details coming soon!
   </div>
 </template>
 
