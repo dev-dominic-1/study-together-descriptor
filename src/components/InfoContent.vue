@@ -65,10 +65,10 @@
           <angular-tab-content />
         </v-tab-item>
         <v-tab-item :key="tabs[1].key">
-          <vue-tab-content />
+          <react-tab-content />
         </v-tab-item>
         <v-tab-item :key="tabs[2].key">
-          <react-tab-content />
+          <vue-tab-content />
         </v-tab-item>
       </v-tabs-items>
     </content-section>
@@ -106,8 +106,8 @@ export default {
       tab: 0,
       tabs: [
         {key: 'ANGULAR', color: COMMON_COLORS.ANGULAR, text: 'Angular'},
+        {key: 'REACT', color: COMMON_COLORS.REACT, text: 'React'},
         {key: 'VUE', color: COMMON_COLORS.VUE, text: 'Vue'},
-        {key: 'REACT', color: COMMON_COLORS.REACT, text: 'React'}
       ]
     }
   },
@@ -119,13 +119,13 @@ export default {
           new LinkButtonModel({text: 'Repository', color: COMMON_COLORS.GITHUB, iconName: 'github-custom.png', link: 'github.com/dev-dominic-1/study-together-angular'})
         ],
         [
+          new LinkButtonModel({text: 'React', color: COMMON_COLORS.REACT, iconName: 'react-custom.png', link: 'study-together-react.netlify.app/'}),
+          new LinkButtonModel({text: 'Repository', color: COMMON_COLORS.GITHUB, iconName: 'github-custom.png', link: 'github.com/dev-dominic-1/study-together-react'})
+        ],
+        [
           new LinkButtonModel({text: 'Vue', color: COMMON_COLORS.VUE, iconName: 'vuejs-custom.png', link: 'study-together-vue.netlify.app/'}),
           new LinkButtonModel({text: 'Repository', color: COMMON_COLORS.GITHUB, iconName: 'github-custom.png', link: 'github.com/dev-dominic-1/study-together-vue'})
         ],
-        [
-          new LinkButtonModel({text: 'React', color: COMMON_COLORS.REACT, iconName: 'react-custom.png', link: 'study-together-react.netlify.app/'}),
-          new LinkButtonModel({text: 'Repository', color: COMMON_COLORS.GITHUB, iconName: 'github-custom.png', link: 'github.com/dev-dominic-1/study-together-react'})
-        ]
       ]
     },
     backendRepositoryLinkButton () {
