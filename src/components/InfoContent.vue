@@ -107,7 +107,7 @@ export default {
       tabs: [
         {key: 'ANGULAR', color: COMMON_COLORS.ANGULAR, text: 'Angular'},
         {key: 'VUE', color: COMMON_COLORS.VUE, text: 'Vue'},
-        {key: 'REACT', color: COMMON_COLORS.REACT, text: 'React', disabled: true}
+        {key: 'REACT', color: COMMON_COLORS.REACT, text: 'React'}
       ]
     }
   },
@@ -123,8 +123,8 @@ export default {
           new LinkButtonModel({text: 'Repository', color: COMMON_COLORS.GITHUB, iconName: 'github-custom.png', link: 'github.com/dev-dominic-1/study-together-vue'})
         ],
         [
-          new LinkButtonModel({text: 'React', color: COMMON_COLORS.REACT, iconName: 'react-custom.png', disabled: true}),
-          new LinkButtonModel({text: 'Repository', color: COMMON_COLORS.GITHUB, iconName: 'github-custom.png', disabled: true})
+          new LinkButtonModel({text: 'React', color: COMMON_COLORS.REACT, iconName: 'react-custom.png', link: 'study-together-react.netlify.app/'}),
+          new LinkButtonModel({text: 'Repository', color: COMMON_COLORS.GITHUB, iconName: 'github-custom.png', link: 'github.com/dev-dominic-1/study-together-react'})
         ]
       ]
     },
